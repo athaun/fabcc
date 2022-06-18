@@ -29,6 +29,14 @@ app.get('/store', (req, res) => {
     res.render("store")
 })
 
+app.get('/store/product/:id', (req, res) => {
+    res.render("product", { id: req.params.id })
+})
+
+app.get('/store/cart', (req, res) => {
+    res.render("cart") // { id: req.params.id }
+})
+
 app.get('/', (req, res) => {
     res.render("home")
 })

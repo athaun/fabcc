@@ -109,15 +109,24 @@ body>nav#navbar {
     font-weight: bold;
 }
 
-.btn.fab-btn {
+.btn.fab-btn, div > a.ref-button, div.ref-button, div.ref-checkout-button, div.ref-button.inactive {
     background-color: #76825a;
     border-color: #76825a;
     color: white;
+    transition: all 0.3s;
 }
 
-.btn.fab-btn:hover {
+div.ref-button.ref-button-success:not(.ref-button.inactive) {
+    background-color: #8da94e;
+    border-color: #8da94e;
+    transition: all 0.3s;
+}
+
+.btn.fab-btn:hover, div > a.ref-button:hover, div.ref-button:hover, div.ref-checkout-button:hover {
+    text-decoration: none;
     background-color: #5b6149;
     border-color: #5b6149;
+    transition: all 0.3s;
 }
 
 .btn.fab-btn-outline {
@@ -167,14 +176,25 @@ body>nav#navbar {
 @media screen and (max-width: 570px) {}
 
 
-.textblock {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    bottom: 0px;
+/* Store */
+
+div.reflow-shopping-cart .ref-cart .ref-th {
+    text-transform: none !important;
+    font-family: 'Cinzel';
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.extratext {
-    margin-top: 500px;
+div.reflow-shopping-cart .ref-checkout .ref-checkout-summary, form.ref-shipping-form, div.ref-standard, div.ref-payment-method-instructions {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+div.ref-payment-method-instructions {
+    padding: 0px;
+    border: none;
+}
+
+.ref-form-control {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border-color: rgba(0, 0, 0, 0.6) !important;
 }
