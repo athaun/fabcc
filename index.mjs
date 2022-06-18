@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 })
 
 app.all("*", (req, res) => {
-    res.render("error", { error: `The page you are looking for doesn't exist.` })
+    res.render("error", { error: `<h1>404</h1><br><p>The page you are looking for doesn't exist.</p>` })
 })
 
 app.listen(8090, () => {
