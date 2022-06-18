@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 const { Schema } = mongoose;
 
-const ListSchema = new mongoose.Schema({
+const List = mongoose.model('List', {
     name: {
         type: String,
         required: true
@@ -14,7 +14,5 @@ const ListSchema = new mongoose.Schema({
     },
     assets: [{ type: Schema.Types.ObjectId, ref: 'Asset' }]
 })
-
-const List = mongoose.model('List', ListSchema)
 
 export default List

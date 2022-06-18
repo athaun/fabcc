@@ -1,7 +1,6 @@
 import mongoose from 'mongoose'
-const { Schema } = mongoose;
 
-const AssetSchema = new mongoose.Schema({
+const Asset = mongoose.model('Asset', {
     name: {
         type: String,
         required: true
@@ -15,7 +14,5 @@ const AssetSchema = new mongoose.Schema({
         default: null
     }
 })
-
-const Asset = mongoose.model('Asset', AssetSchema)
 
 export default Asset
