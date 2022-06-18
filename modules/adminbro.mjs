@@ -4,6 +4,8 @@ import AdminBroMongoose from "admin-bro-mongoose"
 import mongoose from "mongoose"
 import User from "./models/User.mjs"
 import bcrypt from 'bcrypt'
+import Page from "./models/Page.mjs"
+
 
 AdminBro.registerAdapter(AdminBroMongoose)
 const mongooseDB = await mongoose.connect("mongodb://localhost:27017/assets")
@@ -39,10 +41,27 @@ const UserResource = {
     },
 }
 
+
+const PageResource = {
+    resource: Page,
+    options: {
+        properties: {
+            content: {
+                type: 'richtext',
+                custom: {
+                    modules: {
+                        toolbar: [['bold', 'italic'], ['link', 'image']],
+                    },
+                },                
+            },
+        }
+    }
+}
+
 const adminBro = new AdminBro({
-  resources: [UserResource],
-  databases: [mongooseDB],
-  rootPath: "/admin",
+    resources: [UserResource, PageResource],
+    databases: [mongooseDB],
+    rootPath: "/admin",
 })
 
 const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
