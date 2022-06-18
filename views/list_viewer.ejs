@@ -1,0 +1,21 @@
+<%- include('partials/head')%>
+
+<%- include('partials/navbar')%>
+
+<div class="container">
+    <br>
+    <br>
+    <h4><%= listName %></h4>
+    <a class="btn btn-sm btn-info" href="/lists/<%= listName %>/add/">Add asset</a>
+    <br>
+    <br>
+    <ul>
+        <% for (let i of assets) { %> 
+            <li>
+                <a href="/asset/<%= i.name %>"><%= i.name %></a>
+            </li>
+        <% } %> 
+    </ul>
+</div>
+
+<%- include('partials/footer')%>

@@ -1,0 +1,143 @@
+body, .container {
+    background: #222529;
+    color: white;
+}
+
+.container * {
+    color: lightgray;
+}
+
+.article div {
+    color: lightgray;
+    background-color: #343A40;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.article h6 {
+    color: rgb(128, 128, 128);
+}
+
+.article:hover, .article div:hover {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.neg-change, .pos-change {
+    font-size: 15px;
+}
+
+.neg-change {
+    color: red;
+}
+
+.pos-change {
+    color: green;
+}
+
+#search-input {
+    border-color: #222529;
+    background-color: #222529; 
+}
+
+#chart-container {
+    height: 40vh;
+}
+
+#chart-container > div {
+    background: #343A40;
+    border-radius: 5px;
+}
+
+#chart-container > div > div.anychart-range-selector.anychart-range-selector-inside > button, #chart-container > div > div.anychart-range-picker.anychart-range-picker-inside > input {
+    background: #222529;
+    color: darkgrey;
+    border: none !important;
+
+}
+
+.anychart-button-standard.anychart-button-checked {
+    background: #222529;
+    color: white !important;
+    border: none !important;
+    outline: none;
+}
+
+.anychart-credits, #chart-container > div > div.anychart-control.anychart-plot-controls {
+    display: none;
+}
+
+/* List viewer */
+ 
+#list-title {
+    text-transform: capitalize;
+}
+
+
+#list>a>div {
+    color: lightgray;
+    background-color: #343A40;
+    padding: 14px 20px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#list>a:hover, #list>a>div:hover {
+    text-decoration: none;
+    color: lightblue;
+}
+
+#col-titles {
+    padding: 10px 20px;
+}
+
+/* Add form */
+
+input#price, input#quantity, button#submit {
+    width: 300px;
+}
+
+input#name, input#price, input#quantity {
+    background: #343A40;
+    border: #343A40;
+    color: lightgray;
+}
+
+#add-form {
+    width: 300px;
+    text-align: center;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    div.container {
+        /* width: 99% !important; */
+        max-width: 1180px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    body {
+        overflow-x: hidden !important;
+        overflow-y: scroll;
+    }
+
+    div#list-container {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: scroll;
+        position: fixed;
+        margin-right: 5px;
+    }
+
+    div#list-container>div {
+        width: 560px;
+        /* padding: 0; */
+        overflow-x: auto;
+        overflow-y: scroll;
+        white-space: nowrap;
+    }
+}

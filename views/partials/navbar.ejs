@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/lists/test">Test<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/lists/anotherList">Another List<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+        <form class="d-flex ml-auto" role="search" id="asset-search">
+            <input class="form-control me-2 form-outline-info" type="search" placeholder="Search assets" aria-label="Search" style="margin-right: 10px;" id="search-input">
+            <button class="btn btn-outline-info" type="submit">Find</button>
+        </form>
+    </div>
+
+    <script>
+    document.querySelector("#asset-search").addEventListener("submit", e => {
+        e.preventDefault()
+        
+        let query = document.querySelector("#search-input").value
+        if (query.length == 0) return
+        window.location = `/asset/${query}`
+    })
+    </script>
+</nav>
