@@ -5,6 +5,10 @@ import mongoose from "mongoose"
 import User from "./models/User.mjs"
 import bcrypt from 'bcrypt'
 import Page from "./models/Page.mjs"
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+export const __dirname = path.dirname(__filename)
 
 
 AdminBro.registerAdapter(AdminBroMongoose)
@@ -41,7 +45,6 @@ const UserResource = {
     },
 }
 
-
 const PageResource = {
     resource: Page,
     options: {
@@ -62,6 +65,9 @@ const adminBro = new AdminBro({
     resources: [UserResource, PageResource],
     databases: [mongooseDB],
     rootPath: "/admin",
+    branding: {
+        companyName: 'FABCC',
+    }
 })
 
 const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
@@ -77,7 +83,7 @@ const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
         }
         return false
     },
-    cookiePassword: 'some-secret-password-used-to-secure-cookie',
+    cookiePassword: 'some-secret-password-used-to-secure-cookie'
 })
 
 // Use this to create users (for now)

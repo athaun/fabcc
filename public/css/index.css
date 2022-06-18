@@ -1,4 +1,4 @@
-body, .container {
+body, .container:not(body > nav > div) {
     background: #222529;
     color: white;
 }

@@ -4,11 +4,10 @@ import { fileURLToPath } from 'url'
 import mongoose from 'mongoose'
 
 import adminBro from './modules/adminbro.mjs'
-import lookups from './modules/lookups.mjs'
-import lists from './modules/lists.mjs'
+import pages from './modules/pages.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+export const __dirname = path.dirname(__filename)
 
 const app = express();
 
@@ -24,10 +23,12 @@ app.use("/admin", adminBro)
 app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 
-app.use("/asset", lookups)
-app.use("/lists", lists)
+app.use("/pages", pages)
 
-/* HOME PAGE */
+app.get('/store', (req, res) => {
+    res.render("store")
+})
+
 app.get('/', (req, res) => {
     res.render("home")
 })
