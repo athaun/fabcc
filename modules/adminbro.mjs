@@ -10,7 +10,6 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 export const __dirname = path.dirname(__filename)
 
-
 AdminBro.registerAdapter(AdminBroMongoose)
 const mongooseDB = await mongoose.connect("mongodb://localhost:27017/assets")
 
@@ -53,7 +52,7 @@ const PageResource = {
                 type: 'richtext',
                 custom: {
                     modules: {
-                        toolbar: [['bold', 'italic'], ['link', 'image']],
+                        toolbar: [['bold', 'italic'], ['link', 'image']]
                     },
                 },                
             },
