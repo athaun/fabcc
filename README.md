@@ -1,6 +1,5 @@
-# MongoDB-CRUD-template
-Template app for mongoDB using express, EJS, and mongoose. Implements CRUD functionality for "Assets" which can be stored in "Lists"
-A full example site using this can be found at [stocks.athaun.tech](http://stocks.athaun.tech)
+# FABCC
+[fabcc.org](https://fabcc.org)
 
 ```
 npm install
