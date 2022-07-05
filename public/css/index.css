@@ -227,7 +227,7 @@ div.ref-payment-method-instructions {
     border-color: rgba(0, 0, 0, 0.6) !important;
 }
 
-#page > div:nth-child(5) > div > div.ref-product-data > span > div > a.inactive {
+.ref-button.inactive {
     color: black;
 }
 
