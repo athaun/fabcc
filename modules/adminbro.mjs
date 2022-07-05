@@ -11,7 +11,7 @@ const __filename = fileURLToPath(import.meta.url)
 export const __dirname = path.dirname(__filename)
 
 AdminBro.registerAdapter(AdminBroMongoose)
-const mongooseDB = await mongoose.connect("mongodb://localhost:27017/assets")
+const mongooseDB = await mongoose.connect("mongodb://localhost:27017/fabcc")
 
 const UserResource = {
     resource: User,
@@ -60,14 +60,20 @@ const PageResource = {
     }
 }
 
-const adminBro = new AdminBro({
+
+const options = {
     resources: [UserResource, PageResource],
     databases: [mongooseDB],
+    dashboard: {
+        component: AdminBro.bundle(path.join(__dirname, '/adminbro_dashboard.jsx'))
+    },
     rootPath: "/admin",
     branding: {
         companyName: 'FABCC',
     }
-})
+}
+
+const adminBro = new AdminBro(options)
 
 const router = AdminBroExpress.buildAuthenticatedRouter(adminBro, {
     authenticate: async (email, password) => {

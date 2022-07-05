@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cinzel:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cinzel:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cinzel:wght@400;700&family=Cormorant+Upright:wght@300&family=Libre+Baskerville:wght@400;700&display=swap');
 
 /* General styles */
 body {
@@ -109,7 +108,12 @@ body>nav#navbar {
     font-weight: bold;
 }
 
-.btn.fab-btn, div > a.ref-button, div.ref-button, div.ref-checkout-button, div.ref-button.inactive {
+#home-page-background > div > div > div:nth-child(2) > h3 {
+    font-family: 'Cormorant Upright', serif;
+    font-weight: lighter;
+}
+
+.btn.fab-btn, div > a.ref-button, div.ref-button, div.ref-checkout-button, div.ref-button.inactive, body > div.ref-notification.success.no-description > div > a {
     background-color: #76825a;
     border-color: #76825a;
     color: white;
@@ -122,7 +126,7 @@ div.ref-button.ref-button-success:not(.ref-button.inactive) {
     transition: all 0.3s;
 }
 
-.btn.fab-btn:hover, div > a.ref-button:hover, div.ref-button:hover, div.ref-checkout-button:hover {
+.btn.fab-btn:hover, div > a.ref-button:hover, div.ref-button:hover, div.ref-checkout-button:hover, body > div.ref-notification.success.no-description > div > a:hover {
     text-decoration: none;
     background-color: #5b6149;
     border-color: #5b6149;
@@ -182,6 +186,21 @@ div.ref-button.ref-button-success:not(.ref-button.inactive) {
     }
 }
 
+/* @media screen and (max-height: 1190px) {
+    div.container {
+        margin-bottom: 30px !important;
+        min-height: 100vh;
+    }
+} */
+
+@media screen and (max-height: 1100px) {
+    .page-background>div.container {
+        top: 80px !important; 
+        min-height: calc(100% - 100px);
+        /* margin-bottom: 100px !important; */
+    }
+}
+
 @media screen and (max-width: 570px) {}
 
 
@@ -194,7 +213,7 @@ div.reflow-shopping-cart .ref-cart .ref-th {
     font-size: 20px;
 }
 
-div.reflow-shopping-cart .ref-checkout .ref-checkout-summary, form.ref-shipping-form, div.ref-standard, div.ref-payment-method-instructions {
+div.reflow-shopping-cart .ref-checkout .ref-checkout-summary, form.ref-shipping-form, div.ref-standard, div.ref-payment-method-instructions, #page > div > div > div.ref-message {
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -206,4 +225,36 @@ div.ref-payment-method-instructions {
 .ref-form-control {
     background-color: rgba(0, 0, 0, 0.3) !important;
     border-color: rgba(0, 0, 0, 0.6) !important;
+}
+
+#page > div:nth-child(5) > div > div.ref-product-data > span > div > a.inactive {
+    color: black;
+}
+
+.ref-notification, .ref-notification > div {
+    background-color: rgb(55, 55, 55) !important;
+    border: 1px solid rgb(55, 55, 55) !important;
+    box-shadow: none !important;
+    font-family: 'Libre Baskerville', serif;
+}
+
+#storenav {
+    position: relative;
+    list-style: none;
+    margin-left: -50px;
+    margin-bottom: 40px;
+}
+
+#storenav > li {
+    display: inline;
+    margin: 0 10px;
+}
+
+#storenav a {
+    color: white;
+    font-family: 'Cinzel Decorative';
+}
+
+#page > div > div > div.ref-cart > div.ref-heading {
+    display: none;
 }

@@ -7,9 +7,7 @@
 
 <div class="page-background">
     <div class="container page" id="page">
-        <a href="/store/cart">Cart</a>
-        <br><br>
-        <h2 class="mb-4">Products</h2>
+        <%- include('partials/storenav') %>
         <div id="product-list-comp" data-reflow-type="product-list" data-reflow-perpage="8"
              data-reflow-order="price_desc" data-reflow-layout="cards"
              data-reflow-product-link="/store/product/{id}">

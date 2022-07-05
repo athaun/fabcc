@@ -7,9 +7,8 @@
 
 <div class="page-background">
     <div class="container page" id="page">
-        <a href="/store">Back</a> - <a href="/store/cart">Cart</a>
-        <br><br>
-        <!-- Since we don't pass a data-reflow-product parameter, the Product component will look for ?product=xxxx in the page URL. -->
+        <%- include('partials/storenav') %>
+
         <div data-reflow-type="product" data-reflow-product="<%= id %>" data-reflow-shoppingcart-url="/store/cart"></div>
 
         <h4 class="mt-5 mb-5">Similar Products</h4>
