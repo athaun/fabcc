@@ -76,6 +76,10 @@ body>nav#navbar {
 /* Home page */
 #home-page-background,
 .page-background {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     background-image: url("/images/daria-fabart.jpeg");
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: multiply;
@@ -186,12 +190,13 @@ div.ref-button.ref-button-success:not(.ref-button.inactive) {
     }
 }
 
-/* @media screen and (max-height: 1190px) {
-    div.container {
-        margin-bottom: 30px !important;
-        min-height: 100vh;
+@media screen and (max-width: 993px) {
+    body>nav#navbar {
+        background-color: rgb(39, 39, 39);
     }
-} */
+}
+
+
 
 @media screen and (max-height: 1100px) {
     .page-background>div.container {
@@ -213,8 +218,8 @@ div.reflow-shopping-cart .ref-cart .ref-th {
     font-size: 20px;
 }
 
-div.reflow-shopping-cart .ref-checkout .ref-checkout-summary, form.ref-shipping-form, div.ref-standard, div.ref-payment-method-instructions, #page > div > div > div.ref-message {
-    background-color: rgba(0, 0, 0, 0);
+div.reflow-shopping-cart .ref-checkout .ref-checkout-summary, form.ref-shipping-form, div.ref-standard, div.ref-payment-method-instructions, #page > div > div > div.ref-message, .reflow-shopping-cart .ref-checkout .ref-summary-toggle {
+    background-color: rgba(0, 0, 0, 0) !important;
 }
 
 div.ref-payment-method-instructions {
