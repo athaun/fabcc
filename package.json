@@ -1,14 +1,15 @@
 {
-  "name": "Templating_Demo",
+  "name": "FABCC",
   "version": "1.0.0",
-  "description": "",
+  "description": "Flesh and Blood - Classic Constructed",
   "main": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "production": "node index.mjs",
+    "dev": "nodemon index.mjs"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Asher Haun",
+  "license": "MIT",
   "dependencies": {
     "admin-bro": "^3.2.5",
     "admin-bro-expressjs": "^2.1.1",

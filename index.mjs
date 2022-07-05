@@ -51,17 +51,4 @@ app.listen(8090, () => {
     console.log("Listening")
 })
 
-/* 
-* Lookups *
-GET     /asset/:asset - returns asset lookup page
-
-* Lists *
-GET     /lists/:list   - Return a full list of assets
-GET     /lists/:list/add - Add an asset to list
-
-POST    /lists/:list   - Add an asset to list
-PATCH   /lists/:list   - Edit an asset in list
-DELETE  /lists/:list   - Remove an asset from list
-*/
-
 export default app

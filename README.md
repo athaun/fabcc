@@ -9,8 +9,10 @@ npm install
 npm install -g nodemon
 ```
 
-```
-nodemon index
+```bash
+npm run dev
+# or
+npm run production
 ```
 
 Requires mongoDB to be running.
