@@ -206,7 +206,28 @@ div.ref-button.ref-button-success:not(.ref-button.inactive) {
     }
 }
 
-@media screen and (max-width: 570px) {}
+@media screen and (max-width: 480px) {
+    #home-page-background > div > div > div:nth-child(2) > h3 {
+        margin-top: 20px;
+    }
+
+    #home-page-background > div > div > div.col.fancy > br {
+        display: none;
+    }
+
+    #get-started-btn {
+        margin: 10px 0;
+    }
+
+    #home-page-background>.container {
+        top: 10%;
+    }
+
+    #home-page-background > div > div {
+        width: 95vw;
+        margin: 0 auto;
+    }
+}
 
 
 /* Store */
