@@ -1,0 +1,23 @@
+<%- include('partials/head')%>
+
+<%- include('partials/navbar')%>
+
+<div class="page-background">
+    <div class="container page" id="page">
+        Found <%= pages.length %> result<%= pages.length > 1 ? "s" : "" %> 
+        <br><br>
+        <% for (let i of pages) { %>
+            <div class="">
+                <a href="/pages/<%= i.title %>">
+                    <h5><%= i.title.charAt(0).toUpperCase() + i.title.slice(1).replace(/_/g, " ") %></h5>
+                    <p>
+                        <%= i.searchDescription %>
+                    </p>
+                </a>
+            </div>
+            <br>
+        <% } %> 
+    </div>
+</div>
+
+<%- include('partials/footer')%>

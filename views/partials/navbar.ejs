@@ -25,6 +25,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/store">Store<span class="sr-only">(current)</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/pages/about">About<span class="sr-only">(current)</span></a>
+            </li>
         </ul>
         <form class="d-flex ml-auto" role="search" id="asset-search">
             <input class="form-control me-2" type="search" placeholder="Find something..."
@@ -39,7 +42,7 @@
 
             let query = document.querySelector("#search-input").value
             if (query.length == 0) return
-            window.location = `/asset/${query}`
+            window.location = `/search/${query}`
         })
     </script>
 </nav>

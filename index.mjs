@@ -5,6 +5,7 @@ import mongoose from 'mongoose'
 
 import adminBro from './modules/adminbro.mjs'
 import pages from './modules/pages.mjs'
+import search from './modules/search.mjs'
 
 const __filename = fileURLToPath(import.meta.url)
 export const __dirname = path.dirname(__filename)
@@ -24,6 +25,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 
 app.use("/pages", pages)
+app.use("/search", search)
 
 app.get('/store', (req, res) => {
     res.render("store")
